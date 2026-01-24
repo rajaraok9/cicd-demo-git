@@ -48,7 +48,7 @@ pipeline {
                 }
         stage('3. Deploy Locally') {
             steps {
-                // CD: Orchestration
+                // CD: Orchestration will be done here
                 sh 'docker rm -f spring-demo || true'
                 sh 'docker run -d --name spring-demo -p 8081:8080 my-spring-app:latest'
             }
